@@ -18,7 +18,7 @@ and then:
 
 or simply add the dependency to your Gemfile
 
-  
+  gem "yahoo_weatherman", :git => 'git://github.com/modsaid/yahoo_weatherman.git'
 
 == Example
 
