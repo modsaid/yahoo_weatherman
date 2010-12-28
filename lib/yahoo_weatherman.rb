@@ -44,18 +44,18 @@ module Weatherman
     #
     # Just pass in a +woeid+ and it will return a Weatherman::Response object:w
     #
-    def lookup_by_woeid(woeid)
-      raw = get request_url(woeid)
+    def lookup_by_city_code(city_code)
+      raw = get request_url(city_code)
       Response.new(raw, options[:lang])
     end
 
     private
-      def request_url(woeid)
-        @uri + query_string(woeid)
+      def request_url(city_code)
+        @uri + query_string(city_code)
       end
 
-      def query_string(woeid)
-        "?w=#{woeid}&u=#{degrees_units}"
+      def query_string(city_code)
+        "?p=#{city_code}&u=#{degrees_units}"
       end
 
       def degrees_units

@@ -4,6 +4,7 @@ A simple wrapper for the Yahoo! Weather API.
  
 It supports internationalization via YAML files. Just checkout the i18n directory to figure out how to
 add support for your language. 
+Forked and updated by modsaid to match the URL parameter *p* of the yahoo weather forcasts.
 
 == Instalation
 
@@ -15,17 +16,23 @@ and then:
 
   gem install yahoo_weatherman
 
+or simply add the dependency to your Gemfile
+
+  
+
 == Example
 
 Weatherman is very easy to use. Just search for a city woeid in the Yahoo! Weather homepage and have fun!
 url: http://weather.yahoo.com/search
 
   client = Weatherman::Client.new
-  reponse = client.lookup_by_woeid 455821
+  response = client.lookup_by_city_code 'EGXX0001'
 
-  respose.location['city'] => "Belo Horizonte"
-  response.location['country'] => "Brazil"
-  response.condition['date'] => #<Date: -1/2,0,2299161>
+  response.location['city'] => "Alexandria"
+  response.location['country'] => "EG"
+  response.condition['date'] => #<Date: 2010-12-28 (4911117/2,0,2299161)>
+  response.condition['temp'] => 23
+  response.condition['text'] => "Fair"
 
 
   ptbr_client = Weatherman::Client.new :lang => 'pt-br'
