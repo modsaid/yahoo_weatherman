@@ -1,8 +1,8 @@
 Gem::Specification.new do |gem|
-  gem.name = "yahoo_weatherman"
+  gem.name = "yahoo_weatherman_extended"
   gem.version = "1.2.0"
   gem.authors = ["Dalto Curvelano Junior", "Mahmoud Said"]
-  gem.description = "A ruby wrapper to the Yahoo! Weather feed with i18n support."
+  gem.description = "a fork of leandroo/yahoo_weatherman, A ruby wrapper to the Yahoo! Weather feed with i18n support, to handle the updated parameters for yahoo weather service parameters."
   gem.summary = "A ruby wrapper to the Yahoo! Weather feed with i18n support."
   gem.files = [
     "yahoo_weatherman.gemspec",
@@ -18,5 +18,5 @@ Gem::Specification.new do |gem|
     "spec/yahoo_weatherman/yahoo_weatherman_spec.rb",
     "spec/yahoo_weatherman/i18n_spec.rb"
   ]
-  gem.homepage = "http://github.com/dlt/yahoo_weatherman"
+  gem.homepage = "http://github.com/modsaid/yahoo_weatherman"
 end
